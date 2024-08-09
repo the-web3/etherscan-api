@@ -158,7 +158,7 @@ func (c *Client) ERC1155Transfers(contractAddress, address *string, startBlock *
 }
 
 // SwapTransactions get a list of transaction
-func (c *Client) SwapTransactions(address *string, startBlock *int, endBlock *int, page int, offset int, desc bool) (txs []SwapTransaction, err error) {
+func (c *Client) SwapTransactions(address string, startBlock *int, endBlock *int, page int, offset int, desc bool) (txs []SwapTransaction, err error) {
 	param := M{
 		"page":   page,
 		"offset": offset,
