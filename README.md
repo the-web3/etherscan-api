@@ -1,25 +1,25 @@
-**English** | [中文](https://github.com/nanmu42/etherscan-api/blob/master/README_ZH.md)
+**English** | [中文](https://github.com/the-web3/etherscan-api/blob/master/README_ZH.md)
 
 # etherscan-api
 
-[![GoDoc](https://godoc.org/github.com/nanmu42/etherscan-api?status.svg)](https://godoc.org/github.com/nanmu42/etherscan-api)
-[![CI status](https://github.com/nanmu42/etherscan-api/actions/workflows/ci.yaml/badge.svg)](https://github.com/nanmu42/etherscan-api/actions)
+[![GoDoc](https://godoc.org/github.com/the-web3/etherscan-api?status.svg)](https://godoc.org/github.com/the-web3/etherscan-api)
+[![CI status](https://github.com/the-web3/etherscan-api/actions/workflows/ci.yaml/badge.svg)](https://github.com/the-web3/etherscan-api/actions)
 [![codecov](https://codecov.io/gh/nanmu42/etherscan-api/branch/master/graph/badge.svg)](https://codecov.io/gh/nanmu42/etherscan-api)
-[![Go Report Card](https://goreportcard.com/badge/github.com/nanmu42/etherscan-api)](https://goreportcard.com/report/github.com/nanmu42/etherscan-api)
+[![Go Report Card](https://goreportcard.com/badge/github.com/the-web3/etherscan-api)](https://goreportcard.com/report/github.com/the-web3/etherscan-api)
 
 Golang client for the Etherscan.io API(and its families like BscScan), with nearly full implementation(accounts, transactions, tokens, contracts, blocks, stats), full network support(Mainnet, Ropsten, Kovan, Rinkby, Goerli, Tobalaba), and only depending on standard library. :wink:
 
 # Usage
 
 ```bash
-go get github.com/nanmu42/etherscan-api
+go get github.com/the-web3/etherscan-api
 ```
 
 Create an API instance and off you go. :rocket:
 
 ```go
 import (
-	"github.com/nanmu42/etherscan-api"
+	"github.com/the-web3/etherscan-api"
 	"fmt"
 )
 
@@ -61,7 +61,7 @@ func main() {
 }
 ```
 
-You may find full method list at [GoDoc](https://godoc.org/github.com/nanmu42/etherscan-api).
+You may find full method list at [GoDoc](https://godoc.org/github.com/the-web3/etherscan-api).
 
 # Etherscan API Key
 

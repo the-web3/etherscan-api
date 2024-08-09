@@ -5,5 +5,5 @@
 // with full network support(Mainnet, Ropsten, Kovan, Rinkby, Tobalaba),
 // and only depending on standard library.
 //
-// Example can be found at https://github.com/nanmu42/etherscan-api
+// Example can be found at https://github.com/the-web3/etherscan-api
 package etherscan

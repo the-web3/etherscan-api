@@ -88,7 +88,7 @@ func (c *Client) InternalTxByAddress(address string, startBlock *int, endBlock *
 // and TokenDecimal is 0.
 //
 // More information can be found at:
-// https://github.com/nanmu42/etherscan-api/issues/8
+// https://github.com/the-web3/etherscan-api/issues/8
 func (c *Client) ERC20Transfers(contractAddress, address *string, startBlock *int, endBlock *int, page int, offset int, desc bool) (txs []ERC20Transfer, err error) {
 	param := M{
 		"page":   page,
