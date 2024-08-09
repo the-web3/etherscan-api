@@ -115,6 +115,10 @@ func TestClient_ERC20Transfers(t *testing.T) {
 	}
 }
 
+func TestClient_SwapTransactions(t *testing.T) {
+
+}
+
 func TestClient_BlocksMinedByAddress(t *testing.T) {
 	const wantLen = 10
 

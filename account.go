@@ -7,6 +7,8 @@
 
 package etherscan
 
+import "strings"
+
 // AccountBalance gets ether balance for a single address
 func (c *Client) AccountBalance(address string) (balance *BigInt, err error) {
 	param := M{
@@ -153,6 +155,30 @@ func (c *Client) ERC1155Transfers(contractAddress, address *string, startBlock *
 
 	err = c.call("account", "token1155tx", param, &txs)
 	return
+}
+
+// SwapTransactions get a list of transaction
+func (c *Client) SwapTransactions(address *string, startBlock *int, endBlock *int, page int, offset int, desc bool) (txs []SwapTransaction, err error) {
+	param := M{
+		"page":   page,
+		"offset": offset,
+	}
+	compose(param, "address", address)
+	compose(param, "startblock", startBlock)
+	compose(param, "endblock", endBlock)
+	if desc {
+		param["sort"] = "desc"
+	} else {
+		param["sort"] = "asc"
+	}
+	err = c.call("account", "txlist", param, &txs)
+	var txList []SwapTransaction
+	for _, tx := range txs {
+		if tx.MethodId != "0x" && strings.ContainsAny(tx.FunctionName, "execute") { // maybe swap transaction
+			txList = append(txList, tx)
+		}
+	}
+	return txList, nil
 }
 
 // BlocksMinedByAddress gets list of blocks mined by address
